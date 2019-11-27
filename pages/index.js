@@ -1,85 +1,56 @@
 import React from 'react'
 import Head from 'next/head'
-import Nav from '../components/nav'
+import {Container, Row, Col, Card, CardImg, CardBody, CardTitle} from 'reactstrap'
 
 const Home = () => (
   <div>
     <Head>
       <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     </Head>
 
-    <Nav />
-
-    <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
-      <div className="row">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
-      </div>
-    </div>
-
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    <Container>
+      <Row>
+        <Col xs="12" sm="6" md="4" className="colpad">
+          <Card>
+            <CardImg top width="100%" src="/advantest_93k.jpg" />
+            <CardBody>
+              <CardTitle>
+                Advantest 93000 Test System
+              </CardTitle>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs="12" sm="6" md="4" className="colpad">
+          <Card>
+            <CardImg top width="100%" src="/efkoverhead.jpg" />
+            <CardBody>
+              <CardTitle>
+                Former IBM East Fishkill Site
+              </CardTitle>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs="12" sm="6" md="4" className="colpad">
+          <Card>
+            <CardImg top width="100%" src="/ibmpoksign.jpg" />
+            <CardBody>
+              <CardTitle>
+                IBM Poughkeepsie Site
+              </CardTitle>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+    
+    <style jsx global>{`
+      div[class*="col"] {
+        padding: 15px;
       }
       .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
+        height: 100%;
       }
     `}</style>
   </div>

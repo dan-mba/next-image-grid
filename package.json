@@ -10,6 +10,9 @@
   "dependencies": {
     "next": "9.1.4",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-dom": "16.12.0",
+    "reactstrap": "^8.1.1",
+    "sequelize": "^5.21.2",
+    "sqlite3": "^4.1.0"
   }
 }
