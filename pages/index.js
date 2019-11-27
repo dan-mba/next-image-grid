@@ -1,8 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import fetch from 'isomorphic-unfetch'
+import PropTypes from 'prop-types'
 import {Container, Row, Col, Card, CardImg, CardBody, CardTitle} from 'reactstrap'
+import {webserver} from '../util/webserver'
 
-const Home = () => (
+const Home = ({images}) => (
   <div>
     <Head>
       <title>Home</title>
@@ -12,36 +16,20 @@ const Home = () => (
 
     <Container>
       <Row>
-        <Col xs="12" sm="6" md="4" className="colpad">
-          <Card>
-            <CardImg top width="100%" src="/advantest_93k.jpg" />
-            <CardBody>
-              <CardTitle>
-                Advantest 93000 Test System
-              </CardTitle>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" sm="6" md="4" className="colpad">
-          <Card>
-            <CardImg top width="100%" src="/efkoverhead.jpg" />
-            <CardBody>
-              <CardTitle>
-                Former IBM East Fishkill Site
-              </CardTitle>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" sm="6" md="4" className="colpad">
-          <Card>
-            <CardImg top width="100%" src="/ibmpoksign.jpg" />
-            <CardBody>
-              <CardTitle>
-                IBM Poughkeepsie Site
-              </CardTitle>
-            </CardBody>
-          </Card>
-        </Col>
+        { images.map(image => 
+          <Col xs="12" sm="6" md="4" className="colpad" key={image.Id}>
+            <Link href="/image/[id]" as={`/image/${image.Id}`}>
+              <Card>
+                <CardImg top width="100%" src={image.Img} />
+                <CardBody>
+                  <CardTitle>
+                    {image.Title}
+                  </CardTitle>
+                </CardBody>
+              </Card>
+            </Link>
+          </Col>
+        )}
       </Row>
     </Container>
     
@@ -51,9 +39,23 @@ const Home = () => (
       }
       .card {
         height: 100%;
+        cursor: pointer;
+      }
+      .card:hover {
+        background-color: #ccc;
       }
     `}</style>
   </div>
 )
+
+Home.propTypes = {
+  images: PropTypes.array
+}
+
+Home.getInitialProps = async () => {
+  const res = await fetch(`${webserver}/api/images`)
+  const json = await res.json()
+  return { images: json.images }
+}
 
 export default Home

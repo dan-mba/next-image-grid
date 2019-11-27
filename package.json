@@ -3,16 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.4",
+    "prop-types": "^15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "reactstrap": "^8.1.1",
     "sequelize": "^5.21.2",
     "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "eslint": "^6.7.1",
+    "eslint-plugin-react": "^7.16.0"
   }
 }
