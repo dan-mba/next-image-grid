@@ -19,6 +19,10 @@ app.prepare().then(() => {
     return images.getImages(res, Image);
   });
 
+  server.get('/favicon.ico', (req, res) => (
+    res.status(200).sendFile('favicon.ico', {root: __dirname + '/public/'})
+  ));
+
   server.all('*', (req, res) => {
     return handle(req, res);
   });

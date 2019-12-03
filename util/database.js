@@ -15,18 +15,24 @@ exports.dbInit = () => {
       console.error('Unable to connect to the database:', err);
     });
 
-  const Image = sequelize.define('image',{
-    Id: {
+  const Image = sequelize.define('Image',{
+    id: {
       type: Sequelize.INTEGER,
       primaryKey: true
     },
-    Title: {
+    title: {
       type: Sequelize.TEXT
     },
-    Img: {
+    caption: {
       type: Sequelize.TEXT
     },
-    Story: {
+    img: {
+      type: Sequelize.TEXT
+    },
+    story: {
+      type: Sequelize.TEXT
+    },
+    original : {
       type: Sequelize.TEXT
     }
   }, {
@@ -37,15 +43,16 @@ exports.dbInit = () => {
 }
 
 exports.getImages = (res, Image) => {
-  Image.findAll().then(images => {
-    res.json({images});
-  }).catch(() => {
-    res.json({images: []});
-  })
+  Image.findAll({attributes: ['id', 'title', 'img']})
+    .then(images => {
+      res.json({images});
+    }).catch(() => {
+      res.json({images: []});
+    })
 }
 
-exports.getImageById = (res, Image, Id) => {
-  Image.findByPk(Id).then(image => {
+exports.getImageById = (res, Image, id) => {
+  Image.findByPk(id).then(image => {
     res.json({image: image});
   }).catch(() => {
     res.json({image: null});

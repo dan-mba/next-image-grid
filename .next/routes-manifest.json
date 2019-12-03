@@ -1,0 +1,1 @@
+{"version":1,"redirects":[],"rewrites":[],"dynamicRoutes":[{"page":"/image/[id]","regex":"^\\/image\\/([^/]+?)(?:\\/)?$"}]}
