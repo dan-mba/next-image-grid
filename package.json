@@ -15,14 +15,15 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-sanitized-html": "^2.0.0",
-    "reactstrap": "^8.1.1",
+    "reactstrap": "^8.2.0",
     "sanitize-html": "^1.20.1",
     "sequelize": "^5.21.2",
-    "sqlite3": "^4.1.0"
+    "sqlite3": "^4.1.1",
+    "webpack": "^4.41.2"
   },
   "devDependencies": {
     "cross-env": "^6.0.3",
-    "eslint": "^6.7.1",
+    "eslint": "^6.7.2",
     "eslint-plugin-react": "^7.17.0"
   }
 }
