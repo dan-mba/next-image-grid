@@ -2,21 +2,21 @@ const express = require('express')
 const next = require('next')
 const images = require('./util/database')
 
-const port = parseInt(process.env.PORT, 10) || 3000
+const port = process.env.PORT || 5000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-app.prepare().then(() => {
+app.prepare().then(async () => {
   const server = express();
-  const Image = images.dbInit();
+  await images.dbInit();
 
   server.get('/api/images/:id', (req, res) => {
-    return images.getImageById(res, Image, req.params.id);
+    return images.getImageById(res, req.params.id);
   });
 
   server.get('/api/images', (req, res) => {
-    return images.getImages(res, Image);
+    return images.getImages(res);
   });
 
   server.get('/favicon.ico', (req, res) => (
