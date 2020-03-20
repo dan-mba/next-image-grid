@@ -1,1 +1,0 @@
-{"ast":null,"code":"const dev = process.env.NODE_ENV !== 'production';\nexport const webserver = dev ? 'http://localhost:3000' : 'https://dan-mba-next-image-grid.glitch.me/';","map":null,"metadata":{},"sourceType":"module"}
