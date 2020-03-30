@@ -7,7 +7,7 @@ const sequelize = new Sequelize(
     protocol: 'postgres',
     dialectOptions: {
       ssl: {
-        rejectUnauthorized: process.env.NODE_ENV==='production'  //only reject unauthorized in prod
+        rejectUnauthorized: false
       }
     }
   }
