@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
 import PropTypes from 'prop-types'
 import {Container, Row, Col, Card, CardImg, CardBody, CardTitle} from 'reactstrap'
 import {webserver} from '../util/webserver'

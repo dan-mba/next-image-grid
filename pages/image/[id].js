@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import fetch from 'isomorphic-unfetch'
 import PropTypes from 'prop-types'
 import SanitizedHTML from 'react-sanitized-html'
 import {Container} from 'reactstrap'
