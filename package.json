@@ -16,7 +16,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-sanitized-html": "^2.0.0",
-    "reactstrap": "^8.5.1",
+    "reactstrap": "^8.6.0",
     "sanitize-html": "^1.27.4",
     "sequelize": "^6.3.5",
     "webpack": "^4.44.1"
