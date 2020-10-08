@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import SanitizedHTML from 'react-sanitized-html'
 import {Container} from 'reactstrap'
 import {webserver} from '../../util/webserver'
 import Style from '../../components/style'
@@ -24,16 +23,11 @@ const Image = ({image}) => (
               </small>
             </div>
           }
-          <div className="text-center">
-            {image.caption}
-          </div>
+          <div className="text-center">{image.caption}</div>
         </figcaption>
       </figure>
       {!image.story ? "" :
-        <SanitizedHTML 
-          html={image.story}
-          className="story"
-        />
+        <div className="story" dangerouslySetInnerHTML={{__html: image.story}}/>
       }
 
     </Container>

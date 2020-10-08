@@ -15,15 +15,14 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-sanitized-html": "^2.0.0",
     "reactstrap": "^8.6.0",
-    "sanitize-html": "^1.27.5",
+    "sanitize-html": "^2.1.0",
     "sequelize": "^6.3.5",
     "webpack": "^4.44.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "eslint": "^7.9.0",
-    "eslint-plugin-react": "^7.20.6"
+    "eslint": "^7.10.0",
+    "eslint-plugin-react": "^7.21.3"
   }
 }

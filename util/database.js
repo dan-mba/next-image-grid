@@ -1,4 +1,5 @@
 const {Sequelize, DataTypes } = require('sequelize');
+const sanitizeHtml = require('sanitize-html');
 
 const sequelize = new Sequelize(
   process.env.DATABASE_URL,
@@ -56,12 +57,14 @@ exports.getImages = (res) => {
     }).catch(() => {
       res.json({images: []});
     })
-}
-
+  }
+  
 exports.getImageById = (res, id) => {
-  sequelize.models.image.findByPk(id).then(image => {
-    res.json({image: image});
-  }).catch(() => {
-    res.json({image: null});
-  })
+  sequelize.models.image.findByPk(id,{raw: true})
+    .then(image => {
+      const clean = {...image, story: sanitizeHtml(image.story)}
+      res.json({image: clean});
+    }).catch(() => {
+      res.json({image: null});
+    })
 }
