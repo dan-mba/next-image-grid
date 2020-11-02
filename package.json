@@ -15,7 +15,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "reactstrap": "^8.6.0",
+    "reactstrap": "^8.7.0",
     "sanitize-html": "^2.1.1",
     "sequelize": "^6.3.5",
     "webpack": "^5.2.0"
