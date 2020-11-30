@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "next": "^10.0.2",
+    "next": "^10.0.3",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "prop-types": "^15.7.2",
