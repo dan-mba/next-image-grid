@@ -19,7 +19,7 @@
     "reactstrap": "^8.7.1",
     "sanitize-html": "^2.3.0",
     "sequelize": "^6.3.5",
-    "webpack": "^5.10.1"
+    "webpack": "^5.11.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
