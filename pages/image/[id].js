@@ -63,10 +63,33 @@ Image.propTypes = {
   image: PropTypes.object
 }
 
-Image.getInitialProps = async ({query}) => {
-  const res = await fetch(`${webserver}/api/images/${query.id}`)
-  const json = await res.json()
-  return { image: json.image }
+export async function getStaticPaths() {
+  const res = await fetch(`${webserver}/api/images`);
+  const data = await res.json();
+
+  const paths = data.images.map(image => `/image/${image.id}`);
+
+  return {
+    paths: paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({params}) {
+  const res = await fetch(`${webserver}/api/images/${params.id}`)
+  const data = await res.json();
+
+  if(!data) {
+    return {
+      notFound: true
+    };
+  }
+
+  return {
+    props: {
+      image: data.image
+    }
+  };
 }
 
 export default Image;

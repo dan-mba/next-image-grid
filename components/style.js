@@ -1,11 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Style = () => (
   <div>
     <Head>
       <link rel="icon" href="/favicon.ico" />
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     </Head>
 
     <style jsx global>{`

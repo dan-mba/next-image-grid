@@ -63,10 +63,21 @@ Home.propTypes = {
   images: PropTypes.array
 }
 
-Home.getInitialProps = async () => {
+export async function getStaticProps() {
   const res = await fetch(`${webserver}/api/images`)
-  const json = await res.json()
-  return { images: json.images }
+  const data = await res.json();
+
+  if (!data) {
+    return {
+      notFound: true
+    };
+  }
+
+  return { 
+    props: {
+      images: data.images
+    }
+  };
 }
 
 export default Home
