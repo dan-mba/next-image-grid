@@ -50,7 +50,7 @@ exports.dbInit = async () => {
     });
 }
 
-exports.getImages = (res) => {
+exports.getImages = async (res) => {
   sequelize.models.image.findAll({attributes: ['id', 'title', 'img']})
     .then(images => {
       res.json({images});
@@ -59,7 +59,7 @@ exports.getImages = (res) => {
     })
   }
   
-exports.getImageById = (res, id) => {
+exports.getImageById = async (res, id) => {
   sequelize.models.image.findByPk(id,{raw: true})
     .then(image => {
       const clean = {...image, story: sanitizeHtml(image.story)}
