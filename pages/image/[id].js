@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 import {Container} from 'reactstrap'
-import {webserver} from '../../util/webserver'
+import {getImageById, getImages} from "../../util/database"
 import Style from '../../components/style'
 
 const Image = ({image}) => (
@@ -64,10 +64,9 @@ Image.propTypes = {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`${webserver}/api/images`);
-  const data = await res.json();
+  const images = await getImages();
 
-  const paths = data.images.map(image => `/image/${image.id}`);
+  const paths = images.map(image => `/image/${image.id}`);
 
   return {
     paths: paths,
@@ -76,19 +75,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-  const res = await fetch(`${webserver}/api/images/${params.id}`)
-  const data = await res.json();
+  const image = await getImageById(params.id);
 
-  if(!data) {
+  if(!image) {
     return {
       notFound: true
     };
   }
 
   return {
-    props: {
-      image: data.image
-    }
+    props: {image}
   };
 }
 

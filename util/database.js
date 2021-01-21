@@ -1,21 +1,23 @@
 const {Sequelize, DataTypes } = require('sequelize');
 const sanitizeHtml = require('sanitize-html');
 
-const sequelize = new Sequelize(
-  process.env.DATABASE_URL,
-  {
-    dialect: 'postgres',
-    protocol: 'postgres',
-    dialectOptions: {
-      ssl: {
-        rejectUnauthorized: false
+let sequelize = null;
+
+async function dbInit() {
+  sequelize = new Sequelize(
+    process.env.DATABASE_URL,
+    {
+      dialect: 'postgres',
+      protocol: 'postgres',
+      dialectOptions: {
+        ssl: {
+          rejectUnauthorized: false
+        }
       }
     }
-  }
-);
-  
-exports.dbInit = async () => {
-  sequelize
+  );
+
+  return sequelize
     .authenticate()
     .then(() => {
       console.log('Connection has been established successfully.');
@@ -44,27 +46,30 @@ exports.dbInit = async () => {
         timestamps: false
       });
 
+      return sequelize;
     })
     .catch(err => {
       console.error('Unable to connect to the database:', err);
     });
 }
 
-exports.getImages = async (res) => {
-  sequelize.models.image.findAll({attributes: ['id', 'title', 'img']})
+exports.getImages = async () => {
+  sequelize = await dbInit();
+  return sequelize.models.image.findAll({attributes: ['id', 'title', 'img']})
     .then(images => {
-      res.json({images});
+      return(images);
     }).catch(() => {
-      res.json({images: []});
+      return([]);
     })
   }
   
-exports.getImageById = async (res, id) => {
-  sequelize.models.image.findByPk(id,{raw: true})
+exports.getImageById = async (id) => {
+  sequelize = await dbInit();
+  return sequelize.models.image.findByPk(id,{raw: true})
     .then(image => {
       const clean = {...image, story: sanitizeHtml(image.story)}
-      res.json({image: clean});
+      return(clean);
     }).catch(() => {
-      res.json({image: null});
+      return(null);
     })
 }

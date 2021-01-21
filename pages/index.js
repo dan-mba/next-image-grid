@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import {Container, Row, Col, Card, CardImg, CardBody, CardTitle} from 'reactstrap'
-import {webserver} from '../util/webserver'
+import {getImages} from '../util/database'
 import Style from '../components/style'
 
 const Home = ({images}) => (
@@ -64,20 +64,17 @@ Home.propTypes = {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${webserver}/api/images`)
-  const data = await res.json();
+  const images = await getImages();
 
-  if (!data) {
+  if (!images) {
     return {
       notFound: true
     };
   }
 
-  return { 
-    props: {
-      images: data.images
-    }
-  };
+  return JSON.parse(JSON.stringify({ 
+    props: {images}
+  }));
 }
 
 export default Home
