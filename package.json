@@ -24,6 +24,6 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "eslint": "^7.24.0",
-    "eslint-plugin-react": "^7.23.1"
+    "eslint-plugin-react": "^7.23.2"
   }
 }
