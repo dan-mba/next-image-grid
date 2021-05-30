@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import {Container, Row, Col, Card, CardImg, CardBody, CardTitle} from 'reactstrap'
+import {Container, Row, Col, Card} from 'react-bootstrap'
 import {getImages} from '../util/database'
 import Style from '../components/style'
 
@@ -13,18 +13,18 @@ const Home = ({images}) => (
     </Head>
 
     <Container className="text-center">
-      <h1 className="badge text-center badge-light">My Career in Pictures</h1>
-      <Row>
+      <h1 className="badge text-center">My Career in Pictures</h1>
+      <Row className="justify-content-center">
         { images.map(image => 
           <Col xs="12" sm="6" md="4" className="colpad" key={image.id}>
             <Link href="/image/[id]" as={`/image/${image.id}`}>
               <Card>
-                <CardImg top width="100%" src={"/"+image.img+"_sm.jpg"} />
-                <CardBody>
-                  <CardTitle>
+                <Card.Img variant="top" width="100%" src={`/${image.img}_sm.jpg`} />
+                <Card.Body className="d-flex flex-column justify-content-end">
+                  <Card.Title>
                     {image.title}
-                  </CardTitle>
-                </CardBody>
+                  </Card.Title>
+                </Card.Body>
               </Card>
             </Link>
           </Col>
@@ -38,7 +38,7 @@ const Home = ({images}) => (
       h1.badge {
         font-size: 2.5rem;
         white-space: normal;
-        opacity: 0.8;
+        opacity: 0.9;
       }
       div[class*="col"] {
         padding: 15px;
@@ -51,9 +51,6 @@ const Home = ({images}) => (
       .card:hover {
         color: #ddd;
         background-color: #222;
-      }
-      div.row {
-        justify-content: center;
       }
     `}</style>
   </div>

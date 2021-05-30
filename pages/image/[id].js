@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import {Container} from 'reactstrap'
+import {Container} from 'react-bootstrap'
 import {getImageById, getImages} from "../../util/database"
 import Style from '../../components/style'
 
@@ -14,7 +14,7 @@ const Image = ({image}) => (
     <Container className="my-container">
       <h1 className="text-center h2">{image.title}</h1>
       <figure>
-        <img src={"/"+image.img+".jpg"} className="figure-img img-fluid"/>
+        <img src={`/${image.img}.jpg`} className="figure-img img-fluid"/>
         <figcaption className="lead">
           {!image.original ? " " :
             <div className="sm">
