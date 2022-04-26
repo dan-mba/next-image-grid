@@ -20,7 +20,7 @@
     "sequelize": "^6.19.0"
   },
   "devDependencies": {
-    "eslint": "^8.13.0",
+    "eslint": "^8.14.0",
     "eslint-config-next": "^12.1.5",
     "eslint-plugin-react": "^7.29.4"
   }
