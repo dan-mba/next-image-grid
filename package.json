@@ -17,7 +17,7 @@
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
     "sanitize-html": "^2.7.0",
-    "sequelize": "^6.21.2"
+    "sequelize": "^6.21.3"
   },
   "devDependencies": {
     "eslint": "^8.19.0",
