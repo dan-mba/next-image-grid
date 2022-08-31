@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "HOST=$(hostname -I) && next dev --hostname ${HOST}",
     "build": "next build",
     "export": "next export",
     "start": "next start -p ${PORT:-3000}"
