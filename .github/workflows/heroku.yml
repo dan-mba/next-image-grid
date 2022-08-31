@@ -2,11 +2,11 @@ name: Heroku-Deploy
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - ".github/**"
+  # push:
+  #  branches:
+  #    - master
+  #  paths-ignore:
+  #    - ".github/**"
 
 jobs:
   deploy:
