@@ -3,24 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "HOST=$(hostname -I) && next dev --hostname ${HOST}",
     "build": "next build",
+    "export": "next export",
     "start": "next start -p ${PORT:-3000}"
   },
   "engines": {
     "node": "16.x"
   },
   "dependencies": {
-    "bootstrap": "^5.0.1",
+    "bootstrap": "^5.2.0",
     "next": "^12.2.5",
-    "pg": "^8.8.0",
-    "pg-hstore": "^2.3.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "sanitize-html": "^2.7.1",
-    "sequelize": "^6.21.4"
+    "sequelize": "^6.21.4",
+    "sqlite3": "^5.0.11"
   },
   "devDependencies": {
     "eslint": "^8.23.0",

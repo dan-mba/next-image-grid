@@ -1,5 +1,5 @@
 const sanitizeHtml = require('sanitize-html');
-const {dbInit} = require('./pg');
+const {dbInit} = require('./sqlite');
 
 let sequelize = null;
 

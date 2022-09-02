@@ -1,22 +1,15 @@
+const path = require('path');
 const {Sequelize, DataTypes } = require('sequelize');
 
 export async function dbInit() {
-  const sequelize = new Sequelize(
-    process.env.DATABASE_URL,
-    {
-      dialect: 'postgres',
-      protocol: 'postgres',
-      dialectOptions: {
-        ssl: {
-          rejectUnauthorized: false
-        }
-      }
-    }
-  );
+  const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: path.join(`${process.cwd()}`, '/data/images.db')
+  });
 
   try {
     await sequelize.authenticate()
-    console.log('Connection has been established successfully using Postgres.');
+    console.log('Connection has been established successfully using SQLite3.');
 
     sequelize.define('image',{
       id: {
