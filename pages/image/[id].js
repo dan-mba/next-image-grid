@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import NextImage from 'next/Image'
+import NextImage from 'next/image'
 import {useRouter} from 'next/router'
 import PropTypes from 'prop-types'
 import {Container} from 'react-bootstrap'
