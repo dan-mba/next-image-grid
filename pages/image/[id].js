@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import NextImage from 'next/image'
 import {useRouter} from 'next/router'
 import PropTypes from 'prop-types'
 import {Container} from 'react-bootstrap'
@@ -20,14 +19,7 @@ const Image = ({image}) => {
       <Container className="my-container">
         <h1 className="text-center h2">{image.title}</h1>
         <figure>
-          <NextImage
-            src={getLink(`/${image.img}.jpg`)}
-            width={932}
-            height={932/2}
-            className="figure-img img-fluid"
-            alt={image.caption}
-            priority
-          />
+        <img src={getLink(`/${image.img}.jpg`)} className="figure-img img-fluid" alt={image.caption} />
           <figcaption className="lead">
             {!image.original ? " " :
               <div className="sm">
