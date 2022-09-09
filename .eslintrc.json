@@ -6,7 +6,9 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "next",
+        "plugin:@next/next/recommended"
     ],
     "globals": {
         "Atomics": "readonly",

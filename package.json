@@ -6,25 +6,27 @@
     "dev": "HOST=$(hostname -I) && next dev --hostname ${HOST}",
     "build": "next build",
     "export": "next export",
+    "lint": "next lint",
     "start": "next start -p ${PORT:-3000}"
   },
   "engines": {
     "node": "16.x"
   },
   "dependencies": {
-    "bootstrap": "^5.2.0",
-    "next": "^12.2.5",
+    "bootstrap": "^5.2.1",
+    "next": "^12.3.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "sanitize-html": "^2.7.1",
-    "sequelize": "^6.21.4",
+    "sequelize": "^6.21.6",
     "sqlite3": "^5.0.11"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.3.0",
     "eslint": "^8.23.0",
-    "eslint-config-next": "^12.2.5",
-    "eslint-plugin-react": "^7.31.7"
+    "eslint-config-next": "^12.3.0",
+    "eslint-plugin-react": "^7.31.8"
   }
 }
