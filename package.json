@@ -19,7 +19,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
-    "sanitize-html": "^2.7.1",
+    "sanitize-html": "^2.7.2",
     "sequelize": "^6.21.6",
     "sqlite3": "^5.0.11"
   },
