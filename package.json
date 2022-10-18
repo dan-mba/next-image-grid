@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "HOST=$(hostname -I) && next dev --hostname ${HOST}",
+    "dev": "HOST=$(hostname -I | awk '{print $1}') && next dev --hostname ${HOST}",
     "build": "next build",
     "export": "next export",
     "lint": "next lint",
