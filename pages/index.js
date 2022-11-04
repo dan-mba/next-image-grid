@@ -21,7 +21,7 @@ const Home = ({images}) => {
         <Row className="justify-content-center">
           { images.map(image => 
             <Col xs="12" sm="6" md="4" className="colpad" key={image.id}>
-              <Link href="/image/[id]" as={`/image/${image.id}`}>
+              <Link href={`/image/${image.id}`}>
                 <Card>
                   <Card.Img variant="top" width="100%" src={getLink(`/${image.img}_sm.jpg`)} />
                   <Card.Body className="d-flex flex-column justify-content-end">
@@ -49,9 +49,14 @@ const Home = ({images}) => {
         }
         .card {
           height: 100%;
-          cursor: pointer;
           background-color: rgba(255,255,255,0.8);
         }
+
+        .colpad a{
+          color: inherit;
+          text-decoration: none;
+        }
+
         .card:hover {
           color: #ddd;
           background-color: #222;
