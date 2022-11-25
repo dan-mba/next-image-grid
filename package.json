@@ -27,6 +27,6 @@
     "@next/eslint-plugin-next": "^13.0.4",
     "eslint": "^8.27.0",
     "eslint-config-next": "^13.0.4",
-    "eslint-plugin-react": "^7.31.10"
+    "eslint-plugin-react": "^7.31.11"
   }
 }
