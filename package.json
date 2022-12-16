@@ -21,7 +21,7 @@
     "react-dom": "^18.2.0",
     "sanitize-html": "^2.8.0",
     "sequelize": "^6.26.0",
-    "sqlite3": "^5.1.2"
+    "sqlite3": "^5.1.4"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.0.5",
