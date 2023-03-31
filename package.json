@@ -20,7 +20,7 @@
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "sanitize-html": "^2.10.0",
-    "sequelize": "^6.29.3",
+    "sequelize": "^6.30.0",
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
