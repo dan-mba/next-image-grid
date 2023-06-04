@@ -2,10 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import PropTypes from 'prop-types'
-import {Container, Row, Col, Card} from 'react-bootstrap'
 import {getImages} from '../util/database'
-import Style from '../components/style'
+import styles from './index.module.css'
 
 const Home = ({images}) => {
   const router = useRouter();
@@ -16,58 +14,21 @@ const Home = ({images}) => {
         <title>Home</title>
       </Head>
 
-      <Container className="text-center">
-        <h1 className="badge text-center">My Career in Pictures</h1>
-        <Row className="justify-content-center">
+      <main>
+        <h1 className={styles.heading}>My Career in Pictures</h1>
+        <section className={styles.grid}>
           { images.map(image => 
-            <Col xs="12" sm="6" md="4" className="colpad" key={image.id}>
-              <Link href={`/image/${image.id}`}>
-                <Card>
-                  <Card.Img variant="top" width="100%" src={getLink(`/${image.img}_sm.jpg`)} />
-                  <Card.Body className="d-flex flex-column justify-content-end">
-                    <Card.Title>
-                      {image.title}
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
+            <Link href={`/image/${image.id}`} className={styles.link} key={image.id}>
+              <div className={styles.card}>
+                <img className={styles.img} src={getLink(`/${image.img}_sm.jpg`)} alt=""/>
+                <p className={styles.p}>{image.title}</p>
+              </div>
+            </Link>
           )}
-        </Row>
-      </Container>
-
-      <Style />
-          
-      <style jsx global>{`
-        h1.badge {
-          font-size: 2.5rem;
-          white-space: normal;
-          opacity: 0.9;
-        }
-        div[class*="col"] {
-          padding: 15px;
-        }
-        .card {
-          height: 100%;
-          background-color: rgba(255,255,255,0.8);
-        }
-
-        .colpad a{
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .card:hover {
-          color: #ddd;
-          background-color: #222;
-        }
-      `}</style>
+        </section>
+      </main>
     </div>
   )
-}
-
-Home.propTypes = {
-  images: PropTypes.array
 }
 
 export async function getStaticProps() {

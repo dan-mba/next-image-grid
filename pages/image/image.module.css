@@ -1,0 +1,44 @@
+.container {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 1vh;
+  padding: 2% 0;
+  color: #111;
+}
+
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.figure {
+  margin: 0 0 1rem;
+}
+
+.caption {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.sm{
+  font-size: 75%;
+  line-height: 1;
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.figureImg {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.story {
+  padding: 2%
+}
