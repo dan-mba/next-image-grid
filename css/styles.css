@@ -16,7 +16,7 @@ body {
   /* 0.577=tan(30deg)*/
 
   margin: 0 auto;
-  padding: 2%;
+  padding: 2% min(2%, .5rem);
   max-width: 1000px;
 
   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",
