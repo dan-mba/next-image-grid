@@ -33,7 +33,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: " lts/*"
           cache: "npm"
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -59,8 +59,8 @@ jobs:
         run: npm ci
       - name: Build with Next.js
         run: npm run build
-      - name: Static HTML export with Next.js
-        run: npm run export
+      # - name: Static HTML export with Next.js
+      #   run: npm run export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
