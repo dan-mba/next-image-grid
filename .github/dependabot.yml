@@ -12,6 +12,10 @@ updates:
         patterns:
           - "eslint*"
           - "@next/eslint*"
+      react-deps:
+        patterns:
+          - "react"
+          - "react-dom"
     open-pull-requests-limit: 10
   - package-ecosystem: "github-actions"
     directory: "/"
