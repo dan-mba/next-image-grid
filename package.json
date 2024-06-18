@@ -22,9 +22,9 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.2.3",
+    "@next/eslint-plugin-next": "^14.2.4",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.3",
+    "eslint-config-next": "^14.2.4",
     "eslint-plugin-react": "^7.34.2"
   }
 }
