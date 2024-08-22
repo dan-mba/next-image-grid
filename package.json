@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "HOST=$(hostname -I | awk '{print $1}') && next dev --hostname ${HOST}",
+    "prebuild": "npm run lint",
     "build": "next build",
     "export": "next export",
-    "lint": "next lint",
+    "lint": "eslint .",
     "start": "next start -p ${PORT:-3000}"
   },
   "engines": {
@@ -14,7 +15,7 @@
   },
   "dependencies": {
     "modern-normalize": "^3.0.0",
-    "next": "^14.2.5",
+    "next": "^14.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sanitize-html": "^2.13.0",
@@ -22,9 +23,16 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.9.0",
     "@next/eslint-plugin-next": "^14.2.5",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.5",
-    "eslint-plugin-react": "^7.35.0"
+    "eslint": "^9.9.0",
+    "eslint-config-next": "^14.2.6",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.9.0"
+  },
+  "overrides": {
+    "eslint": "^9.9.0"
   }
 }
