@@ -14,7 +14,7 @@
     "node": ">=16.0"
   },
   "dependencies": {
-    "modern-normalize": "^3.0.0",
+    "modern-normalize": "^3.0.1",
     "next": "^14.2.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
