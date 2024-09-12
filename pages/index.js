@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import ImgCard from '../components/ImgCard'
-import {getImages} from '../util/database'
+import {getImages} from '../util/bsqlite3'
 import styles from './index.module.css'
 
 export async function getStaticProps() {
