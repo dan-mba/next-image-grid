@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import FigImage from '../../components/FigImage'
-import {getImageById, getImages} from "../../util/database"
+import {getImageById, getImages} from "../../util/bsqlite3"
 import styles from "./image.module.css"
 
 export async function getStaticPaths() {
