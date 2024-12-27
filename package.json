@@ -19,7 +19,7 @@
     "next": "^15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sanitize-html": "^2.13.1"
+    "sanitize-html": "^2.14.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.1.2",
