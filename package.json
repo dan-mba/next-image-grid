@@ -22,7 +22,7 @@
     "sanitize-html": "^2.14.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.1.7",
-    "eslint-config-next": "^15.1.7"
+    "@next/eslint-plugin-next": "^15.2.1",
+    "eslint-config-next": "^15.2.1"
   }
 }
