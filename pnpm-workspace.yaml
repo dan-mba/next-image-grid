@@ -1,4 +1,9 @@
 minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - next@16.0.7
+  - "@next/env@16.0.7"
+  - "@next/eslint-plugin-next@16.0.7"
+  - eslint-config-next@16.0.7
 
 onlyBuiltDependencies:
   - better-sqlite3
