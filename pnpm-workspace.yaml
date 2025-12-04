@@ -4,6 +4,8 @@ minimumReleaseAgeExclude:
   - "@next/env@16.0.7"
   - "@next/eslint-plugin-next@16.0.7"
   - eslint-config-next@16.0.7
+  - react@19.2.1
+  - react-dom@19.2.1
 
 onlyBuiltDependencies:
   - better-sqlite3
