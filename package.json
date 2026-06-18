@@ -14,7 +14,7 @@
     "node": ">=16.0"
   },
   "dependencies": {
-    "better-sqlite3": "^12.10.1",
+    "better-sqlite3": "^12.11.1",
     "modern-normalize": "^3.0.1",
     "next": "^16.2.9",
     "react": "^19.2.7",
@@ -26,5 +26,5 @@
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.9"
   },
-  "packageManager": "pnpm@11.1.1+sha512.d1fdf5f73c617b64fa1a56a81c3c8dfe0e966e33a6010aa256b517ae77be21d93e05affc0de1a83b0e4f29d569f68b446ae8f068cd7247c0bb3df0fb4d7bdf9a"
+  "packageManager": "pnpm@11.7.0+sha512.19cc852c120c7125760f2443ee6be0ca5b40f9f50598de1a09a1f177503e010e57c23c77646e01e761de59bf874fb22a3398c33ab9691fc13eb946b6f0f4d620"
 }
