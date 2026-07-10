@@ -16,7 +16,7 @@
   "dependencies": {
     "better-sqlite3": "^12.11.1",
     "modern-normalize": "^3.0.1",
-    "next": "^16.2.9",
+    "next": "^16.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "sanitize-html": "^2.17.5"
