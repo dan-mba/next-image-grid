@@ -17,14 +17,14 @@
     "better-sqlite3": "^12.11.1",
     "modern-normalize": "^3.0.1",
     "next": "^16.2.11",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "sanitize-html": "^2.17.6"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^16.2.10",
+    "@next/eslint-plugin-next": "^16.2.11",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.2.10"
+    "eslint-config-next": "^16.2.11"
   },
-  "packageManager": "pnpm@11.7.0+sha512.19cc852c120c7125760f2443ee6be0ca5b40f9f50598de1a09a1f177503e010e57c23c77646e01e761de59bf874fb22a3398c33ab9691fc13eb946b6f0f4d620"
+  "packageManager": "pnpm@11.16.0+sha512.b767e9a98fc87aec0f42daefcd0e84941c2cdb45d73c4e1e68860fb2bdfdbe032ab592105479e5e05c237f740c8a5ffdbbb52385797ddc2296745a1bbb883e8d"
 }

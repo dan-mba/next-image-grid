@@ -1,4 +1,8 @@
 minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - baseline-browser-mapping@2.11.1
+overrides:
+  sharp: "^0.35.0"
 allowBuilds:
   better-sqlite3: true
   sharp: false
