@@ -14,7 +14,7 @@
     "node": ">=16.0"
   },
   "dependencies": {
-    "better-sqlite3": "^12.11.1",
+    "better-sqlite3": "^13.0.2",
     "modern-normalize": "^3.0.1",
     "next": "^16.2.12",
     "react": "^19.2.8",
