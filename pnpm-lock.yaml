@@ -13,8 +13,8 @@ importers:
   .:
     dependencies:
       better-sqlite3:
-        specifier: ^13.0.2
-        version: 13.0.2
+        specifier: ^13.0.3
+        version: 13.0.3
       modern-normalize:
         specifier: ^3.0.1
         version: 3.0.1
@@ -729,13 +729,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  baseline-browser-mapping@2.11.6:
-    resolution: {integrity: sha512-69D/imtToCsIcAl8WBS2YaRwA4jO/j0HhU+hELqMEu9f54MoUtI6+XH5mrKU8rEFNEk/Ui1I2MK4/JkWacclGw==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
-  better-sqlite3@13.0.2:
-    resolution: {integrity: sha512-jW6oufeDhXZaiX9Lw5A+oerVClx4iFrI6uDj1zu7SqUAjak9vbJvA0NEcKLNxHiQHb6kYCoFzzXYV0YOauhV3g==}
+  better-sqlite3@13.0.3:
+    resolution: {integrity: sha512-RbOBxmLBG8uvFUc15X9+9SFemKcQ0WBuISBVkpuiaUB2qblC8UWlHEjdWVoZ8AdhSwmoEgsiXKfopX0CQxaACQ==}
     engines: {node: '>=22'}
 
   brace-expansion@1.1.16:
@@ -769,9 +764,6 @@ packages:
   callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
-
-  caniuse-lite@1.0.30001806:
-    resolution: {integrity: sha512-72Cuvd95zbSYPKq6Fhg8eDJRlzgWDf7/mtoZv6Qe/DYNCEBdNxoA3+rZAU2ZhGCpZlns3EssFavaZomckT5Uuw==}
 
   caniuse-lite@1.0.30001809:
     resolution: {integrity: sha512-xxWVywk6a6Arlk+hymeycyn/VgqEfLDxupvhH/xiY5SJ/18kmi9o6MiO320DCUzypORHLtvh0I4i04tUhCNHNQ==}
@@ -1468,8 +1460,8 @@ packages:
       sass:
         optional: true
 
-  node-addon-api@8.9.0:
-    resolution: {integrity: sha512-ekZMeaaIzSQTSpr7X2X3iJM7lTzgnx8ahAG9pJfT/7+14mlEM8ZYQ9cgCDvSSRbReFK0oHli3WrZdCiRsgAT9Q==}
+  node-addon-api@8.9.2:
+    resolution: {integrity: sha512-VijLXbi3UACN69I0JVXJsX4tjACjNoQDgv2gTF6sx2wWEi8tkSg2eX8p5gSIFi8z2+DL3oHmY6OyKce38SDolg==}
     engines: {node: ^18 || ^20 || >= 21}
 
   node-exports-info@1.6.2:
@@ -2521,11 +2513,9 @@ snapshots:
 
   baseline-browser-mapping@2.11.13: {}
 
-  baseline-browser-mapping@2.11.6: {}
-
-  better-sqlite3@13.0.2:
+  better-sqlite3@13.0.3:
     dependencies:
-      node-addon-api: 8.9.0
+      node-addon-api: 8.9.2
 
   brace-expansion@1.1.16:
     dependencies:
@@ -2542,8 +2532,8 @@ snapshots:
 
   browserslist@4.28.5:
     dependencies:
-      baseline-browser-mapping: 2.11.6
-      caniuse-lite: 1.0.30001806
+      baseline-browser-mapping: 2.11.13
+      caniuse-lite: 1.0.30001809
       electron-to-chromium: 1.5.387
       node-releases: 2.0.50
       update-browserslist-db: 1.2.3(browserslist@4.28.5)
@@ -2566,8 +2556,6 @@ snapshots:
       get-intrinsic: 1.3.0
 
   callsites@3.1.0: {}
-
-  caniuse-lite@1.0.30001806: {}
 
   caniuse-lite@1.0.30001809: {}
 
@@ -3411,7 +3399,7 @@ snapshots:
       - '@types/node'
       - babel-plugin-macros
 
-  node-addon-api@8.9.0: {}
+  node-addon-api@8.9.2: {}
 
   node-exports-info@1.6.2:
     dependencies:
