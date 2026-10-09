@@ -1,9 +1,28 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
-import nextVitals from 'eslint-config-next/core-web-vitals';
- 
-const eslintConfig = defineConfig([
-  ...nextVitals,
+import { defineConfig, globalIgnores } from "eslint/config";
+import globals from "globals";
+import pluginReact from "@eslint-react/eslint-plugin";
+import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next"
+
+export default defineConfig([
   {
+    files: ["**/*.{js,jsx}"],
+    extends: [
+      js.configs.recommended,
+      pluginReact.configs.recommended,
+      nextPlugin.configs.recommended
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true, // Enable JSX syntax support
+        },
+      },
+    },
     rules: {
       '@next/next/no-img-element': 'off'
     }
@@ -17,5 +36,3 @@ const eslintConfig = defineConfig([
     'next-env.d.ts',
   ]),
 ]);
-
-export default eslintConfig;

@@ -43,6 +43,7 @@ const Image = ({image}) => {
           original={image.original}
         />
         {!image.story ? "" :
+          //eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml
           <div className={styles.story} dangerouslySetInnerHTML={{__html: image.story}}/>
         }
       </section>

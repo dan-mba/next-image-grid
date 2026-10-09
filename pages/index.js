@@ -1,4 +1,3 @@
-import React from 'react'
 import Head from 'next/head'
 import ImgCard from '../components/ImgCard'
 import {getImages} from '../util/bsqlite3'
@@ -30,7 +29,7 @@ const Home = ({images}) => {
       <main>
         <h1 className={styles.heading}>My Career in Pictures</h1>
         <section className={styles.grid}>
-          { images.map(image => <ImgCard {...image} key={image.id}/>) }
+          { images.map(image => <ImgCard key={image.id} {...image} />) }
         </section>
       </main>
     </div>
